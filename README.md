@@ -1,33 +1,50 @@
-# react-native-system-settings-lite
+# 📱 react-native-system-settings-lite
 
-react-native-system-settings-turbo is a lightweight React Native package built with Turbo Modules (JSI) that provides high-performance access to device system settings. It allows you to get and set screen brightness and media volume on both Android and iOS, supporting only the New Architecture. Ideal for apps needing native-level control with a clean TypeScript API.
-
-## Installation
-
-```sh
-npm install react-native-system-settings-lite
-```
-
-## Usage
-
-
-```js
-import { multiply } from 'react-native-system-settings-lite';
-
-// ...
-
-const result = multiply(3, 7);
-```
-
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
+Lightweight and modern React Native module to **get and set system volume and screen brightness**, built using the **New Architecture (Turbo Modules)**. Supports **Android** and **iOS** (partial).
 
 ---
 
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+## ✨ Features
+
+- ✅ Get/Set **Screen Brightness** (Android & iOS)
+- ✅ Get/Set **Media Volume** (Android only)
+- ⚡ TurboModule-based for optimal performance
+- 🛠️ Written in **TypeScript**, **Kotlin**, and **Swift**
+- 🔧 Fully compatible with **React Native 0.78+** (New Architecture only)
+
+---
+
+## 🚀 Installation
+
+```bash
+npm install react-native-system-settings-lite
+# or
+yarn add react-native-system-settings-lite
+```
+
+## ✍️ Enable New Architecture (React Native 0.78+)
+
+In react-native.config.js of your project or example app:
+```
+module.exports = {
+  dependencies: {
+    'react-native-system-settings-lite': {
+      platforms: {
+        ios: {
+          newArchitecture: true,
+        },
+        android: {
+          newArchitecture: true,
+        },
+      },
+    },
+  },
+};
+```
+
+Then rebuild your app:
+
+```bash
+cd android && ./gradlew clean
+cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install
+```

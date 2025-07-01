@@ -1,0 +1,8 @@
+node_modules
+android
+ios
+lib
+example/android
+example/ios
+build
+dist

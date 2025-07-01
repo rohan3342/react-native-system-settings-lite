@@ -84,3 +84,9 @@ android/generated
 
 # React Native Nitro Modules
 nitrogen/
+
+
+# Example
+example/ios/Podfile.lock
+example/ios/SystemSettingsLiteExample.xcodeproj/project.pbxproj
+example/ios/SystemSettingsLiteExample.xcworkspace/contents.xcworkspacedata
