@@ -49,6 +49,34 @@ cd android && ./gradlew clean
 cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install
 ```
 
+## Example
+
+```tsx
+import { Text, View, StyleSheet } from 'react-native';
+
+import SystemSettings from 'react-native-system-settings-lite';
+
+const brightness = SystemSettings.getBrightness();
+const volume = SystemSettings.getVolume();
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Brightness: {brightness}</Text>
+      <Text>Volume: {volume}</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+```
+
 ## 🔹 Notes
 
 - ❌ iOS does not allow programmatically setting volume (only brightness)
