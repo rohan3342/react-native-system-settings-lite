@@ -48,3 +48,11 @@ Then rebuild your app:
 cd android && ./gradlew clean
 cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install
 ```
+
+## 🔹 Notes
+
+- ❌ iOS does not allow programmatically setting volume (only brightness)
+
+- Android requires WRITE_SETTINGS permission for brightness changes
+
+- Test on physical devices due to permission limitations in emulators/simulators

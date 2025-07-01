@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage     = package["homepage"]
   s.license      = package["license"]
   s.authors      = package["author"]
-
+  s.frameworks = 'AVFoundation', 'UIKit'
   s.platforms    = { :ios => min_ios_version_supported }
   s.source       = { :git => "https://github.com/rohan3342/react-native-system-settings-lite.git", :tag => "#{s.version}" }
 

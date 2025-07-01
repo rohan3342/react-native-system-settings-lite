@@ -1,12 +1,15 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-system-settings-lite';
 
-const result = multiply(3, 7);
+import SystemSettings from 'react-native-system-settings-lite';
+
+const brightness = SystemSettings.getBrightness();
+const volume = SystemSettings.getVolume();
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Brightness: {brightness}</Text>
+      <Text>Volume: {volume}</Text>
     </View>
   );
 }
